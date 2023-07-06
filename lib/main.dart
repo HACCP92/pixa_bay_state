@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pixa_bay_state/router/router.dart';
+import 'package:pixa_bay_state/ui/main/main_screen.dart';
+import 'package:pixa_bay_state/ui/main/main_view_model.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(

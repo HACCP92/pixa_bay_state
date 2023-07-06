@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pixa_bay_state/ui/main/main_view_model.dart';
 import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget {
@@ -20,8 +21,8 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final viewModel = context.watch<MainScreen>();
-    var imageViewModel;
+    final imageViewModel = context.watch<MainViewModel>();
+    //var imageViewModel;
     return Scaffold(
       appBar: AppBar(
         title: const Text('이미지 검색 앱'),
@@ -62,7 +63,7 @@ class _MainScreenState extends State<MainScreen> {
               ),
               itemCount: imageViewModel.photos.length,
               itemBuilder: (context, index) {
-                final photo = imageViewModel.imageList[index];
+                final photo = imageViewModel.photos[index];
                 return Padding(
                   padding: const EdgeInsets.all(6.0),
                   child: InkWell(
